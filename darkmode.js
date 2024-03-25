@@ -5,7 +5,7 @@ const body = document.querySelector('body');
 const sun = '/assets/sun-icon.svg';
 const moon = '/assets/moon-icon.svg';
 
-const actualMode = JSON.parse(window.localStorage.getItem('darkmode'));
+const actualMode = JSON.parse(window.localStorage.getItem('darkmode')) || false;
 
 function darkOn() {
   darkmode__img.setAttribute('src', moon);
