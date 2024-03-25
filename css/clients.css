@@ -1,0 +1,133 @@
+.background-clients {
+  background-color: var(--titles);
+}
+
+.clients-project__container {
+  height: 46vh;
+  min-height: 400px;
+  max-height: 450px;
+  transform: translateY(-60px);
+  position: relative;
+}
+
+.clients {
+  background-color: var(--titles);
+  position: relative;
+  padding-top: 5rem;
+  z-index: 1;
+}
+
+.clients__title {
+  text-align: center;
+  color: var(--paragraphs);
+  font-variant: small-caps;
+  font-size: 0.8em;
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+.clients__icons {
+  display: flex;
+  justify-content: space-between;
+}
+.client__icon {
+  width: 100px;
+  margin: auto;
+}
+
+.client__icon img {
+  width: 85%;
+  object-fit: contain;
+}
+
+.client__icon--x2 img {
+  width: 100%;
+}
+
+@media screen and (max-width: 1146px) {
+  .background-clients,
+  .clients-project__container {
+    height: calc(46vh + 480px);
+    max-height: none;
+  }
+}
+
+/* --------------------- Project cards ----------------------- */
+
+.project-cards {
+  display: flex;
+  justify-content: space-around;
+  gap: 1rem;
+  flex-wrap: wrap;
+  position: relative;
+  bottom: -20px;
+}
+
+.project-cards__card {
+  margin-top: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 460px;
+  min-width: 340px;
+  height: 200px;
+  background-color: var(--second-background);
+  padding: 1.5rem;
+  border-radius: 3px;
+
+  & p {
+    margin: 1.5rem 0;
+    color: var(--light);
+    font-size: 0.9em;
+  }
+
+  & h4 {
+    font-size: 1em;
+    color: var(--titles);
+    font-weight: 400;
+  }
+
+  a {
+    color: var(--light);
+  }
+}
+
+.project-cards__div {
+  width: 60%;
+
+  & p {
+    width: 90%;
+  }
+}
+
+.project-cards__card-img {
+  position: relative;
+  & div {
+    width: 50%;
+  }
+}
+
+.project-cards__img-float {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 60%;
+  object-fit: cover;
+}
+
+@media screen and (max-width: 1146px) {
+  .project-cards {
+    bottom: 0;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .project-cards__card {
+    width: 100%;
+    min-width: 100%;
+
+    .project-cards__div {
+      width: 90%;
+    }
+  }
+}

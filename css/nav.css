@@ -1,0 +1,153 @@
+.header__nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 80vh;
+  max-height: 900px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 5% 8%;
+}
+
+.header__nav::before {
+  content: '';
+  position: absolute;
+  background-image: var(--header-nav_img);
+  alt: 'header background';
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  max-height: 1100px;
+  width: 45%;
+  z-index: -1;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  z-index: 2;
+}
+
+.nav__menu-container {
+  display: flex;
+}
+
+.nav__title {
+  color: var(--titles);
+}
+
+.nav__ul {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+}
+
+.nav__li {
+  color: var(--paragraphs);
+  cursor: default;
+
+  &:hover {
+    color: var(--titles);
+    transition: color 0.3s;
+  }
+}
+
+.nav__li--hire-us {
+  color: var(--light);
+  &:hover {
+    color: var(--titles);
+  }
+}
+
+.nav__menu-icon {
+  width: 30px;
+  display: none;
+}
+
+.header__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  width: 50%;
+
+  & h1 {
+    color: var(--titles);
+    font-size: clamp(1.5rem, 2vw, 3rem);
+    margin-bottom: 1.5rem;
+  }
+}
+
+.header__buttons {
+  display: flex;
+  gap: 2rem;
+  margin-top: 2rem;
+
+  & .projects-btn {
+    background-color: var(--second-background);
+    color: var(--titles);
+  }
+}
+
+.btn {
+  text-decoration: none;
+  padding: 0.7rem 1.9rem;
+  border-radius: 4px;
+  font-weight: 400;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.learn-btn {
+  border: 1px solid var(--paragraphs);
+  color: var(--paragraphs);
+
+  &:hover {
+    color: var(--titles);
+    border-color: var(--titles);
+    transition: all 0.3s;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .nav {
+    position: relative;
+  }
+  .nav__ul {
+    position: absolute;
+    flex-direction: column;
+    right: 0;
+    top: 2.5rem;
+    background-color: var(--dark-background);
+    border: 1px solid var(--paragraphs);
+    padding: 1rem;
+    border-radius: 3px;
+    display: none;
+  }
+  .nav__li {
+    padding: 0.5rem 1rem;
+  }
+  .nav__menu-icon {
+    display: block;
+  }
+
+  .header__content {
+    width: 80%;
+  }
+  .header__nav::before {
+    width: 60%;
+  }
+
+  .btn {
+    padding: 0.5rem 1.5rem;
+  }
+}
+
+.nav__toggle {
+  display: block;
+}

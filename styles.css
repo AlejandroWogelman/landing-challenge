@@ -1,0 +1,98 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  position: relative;
+}
+
+@font-face {
+  font-family: CircularSTD;
+  src: url('./fonts/CircularStd-Book.woff2') format('woff2');
+}
+
+body {
+  --dark-background: rgb(40, 51, 69);
+  --paragraphs: rgb(173, 185, 200);
+  --titles: rgb(255, 255, 255);
+  --light: rgb(220, 217, 217);
+  --second-background: rgb(56, 113, 255);
+  --dark-text: rgba(0, 0, 0, 0.8);
+  --header-nav_img: url('/assets/header-backgound.webp');
+
+  background-color: var(--dark-background);
+  font-family: CircularSTD;
+  max-width: 1440px;
+  min-width: 320px;
+  margin: 0 auto;
+  padding: 1rem;
+  font-size: 16px;
+}
+
+.darkmode {
+  --dark-background: rgb(215, 204, 186);
+  --paragraphs: rgb(82, 70, 55);
+  --titles: rgb(0, 0, 0);
+  --light: rgb(35, 38, 38);
+  --second-background: rgb(199, 142, 0);
+  --dark-text: rgba(255, 255, 255, 0.8);
+  --header-nav_img: url('/assets/header-backgound-removebg-preview.webp');
+}
+
+@media screen and (max-width: 520px) {
+  body {
+    font-size: 14px;
+    padding: 0;
+  }
+}
+
+p {
+  color: var(--paragraphs);
+}
+
+.darkmode__container {
+  position: fixed;
+  right: 0rem;
+  bottom: 0rem;
+  top: 0;
+  width: 50px;
+  height: 50px;
+  margin: auto 0;
+}
+.darkmode__img {
+  width: 100%;
+}
+
+/* ---------------------------------------------------- */
+
+main {
+  max-width: 1200px;
+  padding: 5% 8%;
+  margin: 0 auto;
+}
+
+.background-tech,
+.background-clients {
+  width: 100%;
+  min-width: 320px;
+  min-height: 400px;
+  position: absolute;
+  left: 0;
+  background-color: var(--second-background);
+  height: 46vh;
+  max-height: 450px;
+  transform: translateY(-60px);
+  z-index: -1;
+}
+
+.portfolio {
+  margin: 2rem 0;
+
+  & a {
+    display: block;
+    color: var(--titles);
+    margin-top: 1rem;
+  }
+}
